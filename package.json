@@ -1,0 +1,19 @@
+{
+  "name": "learning-stripe",
+  "version": "1.0.0",
+  "description": "practicing stuff from stripe docs",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julian-hecker/learning-stripe.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julian-hecker/learning-stripe/issues"
+  },
+  "homepage": "https://github.com/julian-hecker/learning-stripe#readme"
+}
