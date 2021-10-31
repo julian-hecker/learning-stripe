@@ -4,6 +4,7 @@
   "description": "practicing stuff from stripe docs",
   "main": "index.ts",
   "scripts": {
+    "start": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/julian-hecker/learning-stripe/issues"
   },
-  "homepage": "https://github.com/julian-hecker/learning-stripe#readme"
+  "homepage": "https://github.com/julian-hecker/learning-stripe#readme",
+  "dependencies": {
+    "stripe": "^8.184.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
 }
