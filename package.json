@@ -1,12 +1,12 @@
 {
   "name": "learning-stripe",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Learning stripe from Fireship's tutorial",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node lib/index.js",
-    "dev": "concurrently \"tsc -w\" \"nodemon lib/index.js\""
+    "dev": "concurrently \"tsc -w\" \"nodemon lib/index.js\"",
+    "start": "node lib/index.js"
   },
   "repository": {
     "type": "git",
