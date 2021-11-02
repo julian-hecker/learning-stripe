@@ -1,3 +1,13 @@
-node_modules
+# Environment Variables
+.env
 
-secret_do_not_commit.txt
+# Compiled JavaScript files
+lib/**/*.js
+lib/**/*.js.map
+
+# TypeScript v1 declaration files
+typings/
+
+# Node.js dependency directory
+node_modules/
+
