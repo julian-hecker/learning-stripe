@@ -2,12 +2,12 @@ import React from 'react';
 
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route,
   Link,
 } from 'react-router-dom';
 
-// import { Checkout, CheckoutSuccess, CheckoutFail } from './Checkout';
+import { Checkout, CheckoutSuccess, CheckoutFail } from './Checkout';
 // import Payments from './Payments';
 // import Customers from './Customers';
 // import Subscriptions from './Subscriptions';
@@ -57,19 +57,19 @@ export function App() {
         </nav>
 
         <main>
-          <Routes>
-            <Route path="/checkout">{/* <Checkout /> */}</Route>
+          <Switch>
+            <Route path="/checkout">{<Checkout />}</Route>
             <Route path="/payments">{/* <Payments /> */}</Route>
             <Route path="/customers">{/* <Customers /> */}</Route>
             <Route path="/subscriptions">
               {/* <Subscriptions /> */}
             </Route>
-            <Route path="/success">{/* <CheckoutSuccess /> */}</Route>
-            <Route path="/failed">{/* <CheckoutFail /> */}</Route>
-            <Route path="/">
+            <Route path="/success">{<CheckoutSuccess />}</Route>
+            <Route path="/failed">{<CheckoutFail />}</Route>
+            <Route exact path="/">
               <Home />
             </Route>
-          </Routes>
+          </Switch>
         </main>
       </div>
     </Router>
