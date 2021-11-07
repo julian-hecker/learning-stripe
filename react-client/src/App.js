@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 import { Checkout, CheckoutSuccess, CheckoutFail } from './Checkout';
-// import Payments from './Payments';
+import Payments from './Payments';
 // import Customers from './Customers';
 // import Subscriptions from './Subscriptions';
 
@@ -59,7 +59,7 @@ export function App() {
         <main>
           <Switch>
             <Route path="/checkout">{<Checkout />}</Route>
-            <Route path="/payments">{/* <Payments /> */}</Route>
+            <Route path="/payments">{<Payments />}</Route>
             <Route path="/customers">{/* <Customers /> */}</Route>
             <Route path="/subscriptions">
               {/* <Subscriptions /> */}
