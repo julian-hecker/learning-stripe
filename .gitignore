@@ -1,5 +1,6 @@
-# Environment Variables
+# Secret Environment Variables
 .env
+service-account.json
 
 # Compiled JavaScript files
 lib/
