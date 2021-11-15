@@ -1,32 +1,28 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { WebView } from 'react-native-webview';
+import * as WebBrowser from 'expo-web-browser';
+import { Button } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+const APP_URL = 'http://192.168.1.76:4242';
 
 export default function TabTwoScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
-    </View>
-  );
-}
+  const [uri, setUri] = useState('');
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+  useEffect(() => {
+    fetch(`${APP_URL}/create-account`)
+      .then((res) => res.json())
+      .then((res) => {
+        setUri(res.url);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  return (
+    <Button
+      title={uri ? 'Create Accont' : 'Loading...'}
+      disabled={!uri}
+      onPress={() => WebBrowser.openBrowserAsync(uri)}
+    />
+  );
+  // <WebView bounces={false} source={{ uri }}></WebView>
+}

@@ -35,7 +35,6 @@ export default function CheckoutScreen() {
       customerId: customer,
       customerEphemeralKeySecret: ephemeralKey,
       paymentIntentClientSecret: paymentIntent,
-      // allowsDelayedPaymentMethods: false,
     });
 
     if (!error) {
@@ -45,11 +44,9 @@ export default function CheckoutScreen() {
 
   const openPaymentSheet = async () => {
     const { error } = await presentPaymentSheet();
-
-    error && alert(error);
-
+    
     if (error) {
-      alert(`Error! ${error.message}`);
+      alert(JSON.stringify(error));
     } else {
       alert('Your order is confirmed!');
     }
