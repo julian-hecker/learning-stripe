@@ -136,14 +136,11 @@ app.get('/refresh', (req, res) => {
 });
 app.get('/earn', async (req, res) => {
   try {
-    const payout = await stripe.payouts.create({
+    const payout = await stripe.transfers.create({
       amount: 1099,
       currency: 'usd',
       description: 'barbago payout',
-      // destination: 'ba_1JvozKQ0rtbx1tUpGXseIpNH',
-      // source_type: 'bank_account',
-      destination: 'card_1JvryKPrZYFBUwkenzS3cNIt',
-      source_type: 'card',
+      destination: 'acct_1Jvq1APsnSB62T8y',
     });
     res.json(payout);
   } catch (err) {
